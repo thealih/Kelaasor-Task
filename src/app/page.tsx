@@ -12,11 +12,7 @@ interface User {
   phone: string;
 }
 
-interface HomeProps {
-  users: User[];
-}
-
-const Home: React.FC<HomeProps> = async () => {
+const Home: React.FC = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const users: User[] = await res.json();
   return (
