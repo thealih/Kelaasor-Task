@@ -65,11 +65,8 @@ const UserList: React.FC<UserListProps> = ({ users }) => {
         <div className=" content-bar opacity-0">
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {users.map((user: any) => (
-              <Link href={`users/${user.id}`}>
-                <li
-                  key={user.id}
-                  className="p-4 mb-4 bg-gray-100 rounded-md shadow-sm hover:bg-gray-200 leading-8 space-y-3 duration-300 hover:shadow-xl"
-                >
+              <Link href={`users/${user.id}`} key={user.id}>
+                <li className="p-4 mb-4 bg-gray-100 rounded-md shadow-sm hover:bg-gray-200 leading-8 space-y-3 duration-300 hover:shadow-xl">
                   <div className="flex justify-center align-middle">
                     <FaUser className="text-5xl text-gray-500 text-center rounded-full border-solid border-gray-500 border-2 p-1" />
                   </div>
